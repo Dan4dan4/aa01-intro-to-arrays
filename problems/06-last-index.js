@@ -5,17 +5,24 @@ array.  If no character exists in the array, return -1.
 */
 
 // Your code here 
+function lastIndex(array, char){
+   for (i = array.length-1;i >= 0;i--){
+    if (char === array[i]){
+        return i
+    }
+   }
+   return -1
+}
 
-
-// console.log(lastIndex(["a", "b", "c", "a"], "a"));
+ console.log(lastIndex(["a", "b", "c", "a"], "a"));
 //=> 3
-// console.log(lastIndex(["m", "i", "s", "s", "i", "s", "s", "i", "p", "i"], "i"));
+ console.log(lastIndex(["m", "i", "s", "s", "i", "s", "s", "i", "p", "i"], "i"));
 //=> 9
-// console.log(lastIndex(["o", "c", "t", "a", "g", "o", "n"], "o"));
+ console.log(lastIndex(["o", "c", "t", "a", "g", "o", "n"], "o"));
 //=> 5
-// console.log(lastIndex(["p", "r", "o", "g", "r", "a", "m", "m", "i", "n", "g"], "m"));
+ console.log(lastIndex(["p", "r", "o", "g", "r", "a", "m", "m", "i", "n", "g"], "m"));
 //=> 7
-// console.log(lastIndex(["a", "b", "c", "a"], "z"));
+ console.log(lastIndex(["a", "b", "c", "a"], "z"));
 //=> -1
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

@@ -7,14 +7,22 @@ this using a loop.
 */
 
 // Your code here 
+function getIndexOf(prx1, prx2){
 
+    for (i =0;i <prx1.length;i++){
+        if (prx2 === prx1[i]){
+            return i
+        }
+    }
+    return -1
+}
 
-// console.log(getIndexOf(['a', 'b', 'c', 'e'], 'c')); // 2
-// console.log(getIndexOf(['a', 'b', 'c', 'e'], 'e')); // 3
-// console.log(getIndexOf(['a', 'b', 'c', 'e'], 'z')); // -1
-// console.log(getIndexOf([43, -7, 11, 13, 43], 43));  // 0
-// console.log(getIndexOf([43, -7, 11, 13], 1));       // -1
-// console.log(getIndexOf([], 3));                     // -1
+console.log(getIndexOf(['a', 'b', 'c', 'e'], 'c')); // 2
+console.log(getIndexOf(['a', 'b', 'c', 'e'], 'e')); // 3
+console.log(getIndexOf(['a', 'b', 'c', 'e'], 'z')); // -1
+console.log(getIndexOf([43, -7, 11, 13, 43], 43));  // 0
+console.log(getIndexOf([43, -7, 11, 13], 1));       // -1
+console.log(getIndexOf([], 3));                     // -1
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = getIndexOf;

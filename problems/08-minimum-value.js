@@ -5,11 +5,23 @@ array is empty, the function should return null.
 */
 
 // Your code here 
+function minVal(array){
+    if (array.length === 0){
+        return null
+    }
+    let smol = array[0]
+    for (i =0; i < array.length;i++){
+        if (smol > array[i]){
+            smol = array[i]
+            
+        }
 
+    }return smol
+}
 
-// console.log(minVal([4, 6, 3, 5, 2, 4])); // 2
-// console.log(minVal([-2, -3, -7, 3 ]));   // -7
-// console.log(minVal([])); //null
+console.log(minVal([4, 6, 3, 5, 2, 4])); // 2
+console.log(minVal([-2, -3, -7, 3 ]));   // -7
+console.log(minVal([])); //null
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = minVal;

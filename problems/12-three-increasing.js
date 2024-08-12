@@ -5,12 +5,19 @@ array contains three consecutive numbers in consecutive increasing order, like
 */
 
 // Your code here 
+function threeIncreasing(prx){
+    for (i=0;i <prx.length-2;i++){
+        if (prx[i]+1 === prx[i+1] && prx[i+1]+1 === prx[i+2]){
+            return true
+        }
+    }
+    return false
+}
 
-
-// console.log(threeIncreasing([3, 2, 11, 12, 13, 2, 4]));     // true
-// console.log(threeIncreasing([2, 7, 8, 9]));                 // true
-// console.log(threeIncreasing([7, 2, 4, 5, 2, 1, 6]));        // false
-// console.log(threeIncreasing([1, 2, 4, 5, 2, 7, 8]));        // false
+console.log(threeIncreasing([3, 2, 11, 12, 13, 2, 4]));     // true
+console.log(threeIncreasing([2, 7, 8, 9]));                 // true
+console.log(threeIncreasing([7, 2, 4, 5, 2, 1, 6]));        // false
+console.log(threeIncreasing([1, 2, 4, 5, 2, 7, 8]));        // false
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = threeIncreasing;
